@@ -1,0 +1,21 @@
+{
+  "NAV": {
+    "about": "About Us",
+    "home": "Home",
+    "contact": "Contact",
+    "lang": "EN"
+  },
+
+  "BUTTON": {
+    "contact": "Contact us",
+    "suscribe": "Suscribe",
+    "send_message": "Send Message",
+    "learn_more": "Learn More"
+  },
+
+  "CONTACT": {
+    "email": "Email",
+    "phone": "Phone",
+    "location": "Location"
+  }
+}

@@ -1,0 +1,36 @@
+/* // _helper.scss */
+
+/*********************************/
+/*             Helper            */
+/*===============================*/
+
+html {
+  @apply scroll-smooth;
+}
+
+body {
+  @apply font-Roboto text-base text-black dark:text-white;
+}
+
+p {
+  @apply leading-relaxed;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  @apply font-Roboto leading-normal;
+}
+
+::selection {
+  @apply bg-primary-600/90 text-white;
+}

@@ -1,0 +1,14 @@
+.job-content {
+  p {
+    @apply text-slate-500 dark:text-slate-300;
+  }
+  h1 {
+    @apply mb-6 flex place-content-center items-center text-2xl font-medium leading-normal text-black dark:text-white md:text-3xl md:leading-normal;
+  }
+  h2 {
+    @apply my-2 flex-1 text-lg font-medium;
+  }
+  h3 {
+    @apply my-1 flex-1 font-medium;
+  }
+}

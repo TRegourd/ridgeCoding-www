@@ -1,0 +1,20 @@
+{
+  "NAV": {
+    "about": "A propos",
+    "home": "Accueil",
+    "contact": "Contact",
+    "lang": "FR"
+  },
+  "BUTTON": {
+    "contact": "Contactez nous",
+    "suscribe": "S'inscrire",
+    "send_message": "Envoyer",
+    "learn_more": "En savoir plus"
+  },
+
+  "CONTACT": {
+    "email": "Email",
+    "phone": "Téléphone",
+    "location": "Adresse"
+  }
+}

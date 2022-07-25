@@ -1,0 +1,34 @@
+/********************/
+/*    Breadcrumb    */
+/*==================*/
+
+.breadcrumb {
+    @apply tracking-[0.5px] block;
+    .breadcrumb-item {
+        @apply uppercase text-[13px] font-bold inline-block before:content-[''] after:text-sm after:text-black after:dark:text-white after:pl-[5px] last:after:hidden;
+        a {
+            @apply transition duration-500 ease-in-out text-black hover:text-primary-600 dark:text-white dark:hover:text-primary-600;
+        }
+        &.active {
+            @apply text-primary-600;
+        }
+        &:after {
+            content: "\F0142" !important;
+            font-family: 'Material Design Icons';
+        }     
+    }
+    &.breadcrumb-light {
+        .breadcrumb-item {
+            a {
+                @apply text-white/50 hover:text-white;
+            }
+            &.active {
+                @apply text-white;
+            }
+
+            &:after {
+                @apply text-white/50;
+            }
+        }
+    }
+}
