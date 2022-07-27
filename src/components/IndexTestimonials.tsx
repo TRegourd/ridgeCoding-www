@@ -1,11 +1,40 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { tns } from "tiny-slider";
 
 function IndexTestimonials() {
+  function tinySlider() {
+    tns({
+      container: ".tiny-two-item",
+      controls: true,
+
+      loop: true,
+      rewind: true,
+      autoplay: true,
+      autoplayButtonOutput: false,
+      autoplayTimeout: 3000,
+      navPosition: "bottom",
+      controlsText: [
+        '<i class="mdi mdi-chevron-left "></i>',
+        '<i class="mdi mdi-chevron-right"></i>',
+      ],
+
+      nav: false,
+      speed: 400,
+      gutter: 0,
+      responsive: {
+        768: {
+          items: 2,
+        },
+      },
+    });
+  }
+
+  useEffect(() => {
+    tinySlider();
+  }, []);
+
   return (
-    <section
-      className="relative bg-zinc-50 py-16 dark:bg-gray-800 md:py-24"
-      id="testi"
-    >
+    <section className="relative  md:py-24" id="testi">
       <div className="container">
         <div className="grid grid-cols-1 pb-8 text-center">
           <h6 className="mb-2 text-base font-medium uppercase text-primary-600">
