@@ -8,6 +8,7 @@ import IndexServices from "../components/IndexServices";
 import IndexPortfolio from "../components/IndexPortfolio";
 import IndexTestimonials from "../components/IndexTestimonials";
 import IndexContact from "../components/IndexContact";
+import IndexProcess from "../components/IndexProcess";
 
 export default function index({ data }: any) {
   const { title, subtitle, header_img } = data.header.frontmatter;
@@ -40,7 +41,10 @@ export default function index({ data }: any) {
       <Seo seo={seo} lang={data.locales.edges[0].node.language} />
       <IndexHero title={title} subtitle={subtitle} img={header_image} />
       <IndexAbout />
-      <IndexServices />
+      <section className="relative py-16 md:py-24" id="features">
+        <IndexServices />
+        <IndexProcess />
+      </section>
       <IndexPortfolio />
       <IndexTestimonials />
       <IndexContact />

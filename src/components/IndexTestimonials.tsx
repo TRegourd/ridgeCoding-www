@@ -56,7 +56,7 @@ function IndexTestimonials() {
               <div className="relative m-2 overflow-hidden rounded-md p-6 shadow shadow-slate-200 dark:shadow-slate-700 lg:flex lg:p-0">
                 <img
                   className="mx-auto h-24 w-24 rounded-full lg:h-auto lg:w-48 lg:rounded-none"
-                  src="assets/index/testimonials/fred-foo.jpeg"
+                  src="/assets/index/testimonials/fred-foo.jpeg"
                   alt=""
                   width="384"
                   height="512"
@@ -83,7 +83,7 @@ function IndexTestimonials() {
               <div className="relative m-2 overflow-hidden rounded-md p-6 shadow shadow-slate-200 dark:shadow-slate-700 lg:flex lg:p-0">
                 <img
                   className="mx-auto h-24 w-24 rounded-full lg:h-auto lg:w-48 lg:rounded-none"
-                  src="assets/index/testimonials/fred-foo.jpeg"
+                  src="/assets/index/testimonials/fred-foo.jpeg"
                   alt=""
                   width="384"
                   height="512"
@@ -110,7 +110,7 @@ function IndexTestimonials() {
               <div className="relative m-2 overflow-hidden rounded-md p-6 shadow shadow-slate-200 dark:shadow-slate-700 lg:flex lg:p-0">
                 <img
                   className="mx-auto h-24 w-24 rounded-full lg:h-auto lg:w-48 lg:rounded-none"
-                  src="assets/index/testimonials/fred-foo.jpeg"
+                  src="/assets/index/testimonials/fred-foo.jpeg"
                   alt=""
                   width="384"
                   height="512"
@@ -137,7 +137,7 @@ function IndexTestimonials() {
               <div className="relative m-2 overflow-hidden rounded-md p-6 shadow shadow-slate-200 dark:shadow-slate-700 lg:flex lg:p-0">
                 <img
                   className="mx-auto h-24 w-24 rounded-full lg:h-auto lg:w-48 lg:rounded-none"
-                  src="assets/index/testimonials/fred-foo.jpeg"
+                  src="/assets/index/testimonials/fred-foo.jpeg"
                   alt=""
                   width="384"
                   height="512"

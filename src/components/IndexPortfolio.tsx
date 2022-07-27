@@ -24,7 +24,7 @@ function IndexPortfolio() {
         <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
           <div className="group relative overflow-hidden rounded-md shadow-sm">
             <img
-              src="assets/logos/ridge-full-light.png"
+              src="/assets/logos/ridge-full-light.png"
               className="transition duration-500 group-hover:origin-center group-hover:rotate-3 group-hover:scale-110"
               alt=""
             />
@@ -54,7 +54,7 @@ function IndexPortfolio() {
 
           <div className="group relative overflow-hidden rounded-md shadow-sm">
             <img
-              src="assets/logos/ridge-full-light.png"
+              src="/assets/logos/ridge-full-light.png"
               className="transition duration-500 group-hover:origin-center group-hover:rotate-3 group-hover:scale-110"
               alt=""
             />
@@ -84,7 +84,7 @@ function IndexPortfolio() {
 
           <div className="group relative overflow-hidden rounded-md shadow-sm">
             <img
-              src="assets/logos/ridge-full-light.png"
+              src="/assets/logos/ridge-full-light.png"
               className="transition duration-500 group-hover:origin-center group-hover:rotate-3 group-hover:scale-110"
               alt=""
             />
@@ -93,7 +93,7 @@ function IndexPortfolio() {
             <div className="content">
               <div className="icon absolute top-4 right-4 z-10 hidden group-hover:block">
                 <a
-                  href="assets/images/portfolio/3.jpg"
+                  href="/assets/images/portfolio/3.jpg"
                   className="btn btn-primary btn-icon lightbox rounded-full"
                 >
                   <i className="mdi mdi-camera"></i>
@@ -114,7 +114,7 @@ function IndexPortfolio() {
 
           <div className="group relative overflow-hidden rounded-md shadow-sm">
             <img
-              src="assets/logos/ridge-full-light.png"
+              src="/assets/logos/ridge-full-light.png"
               className="transition duration-500 group-hover:origin-center group-hover:rotate-3 group-hover:scale-110"
               alt=""
             />
@@ -124,126 +124,6 @@ function IndexPortfolio() {
               <div className="icon absolute top-4 right-4 z-10 hidden group-hover:block">
                 <a
                   href="assets/images/portfolio/4.jpg"
-                  className="btn btn-primary btn-icon lightbox rounded-full"
-                >
-                  <i className="mdi mdi-camera"></i>
-                </a>
-              </div>
-
-              <div className="absolute bottom-4 left-4 z-10 hidden group-hover:block">
-                <a
-                  href=""
-                  className="h6 text-md font-medium text-white transition duration-500 hover:text-primary-600"
-                >
-                  Mockup Collection
-                </a>
-                <p className="tag mb-0 text-slate-100">Abstract</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="group relative overflow-hidden rounded-md shadow-sm">
-            <img
-              src="assets/logos/ridge-full-light.png"
-              className="transition duration-500 group-hover:origin-center group-hover:rotate-3 group-hover:scale-110"
-              alt=""
-            />
-            <div className="absolute inset-0 z-0 opacity-50 transition duration-500 group-hover:bg-black"></div>
-
-            <div className="content">
-              <div className="icon absolute top-4 right-4 z-10 hidden group-hover:block">
-                <a
-                  href="assets/images/portfolio/5.jpg"
-                  className="btn btn-primary btn-icon lightbox rounded-full"
-                >
-                  <i className="mdi mdi-camera"></i>
-                </a>
-              </div>
-
-              <div className="absolute bottom-4 left-4 z-10 hidden group-hover:block">
-                <a
-                  href=""
-                  className="h6 text-md font-medium text-white transition duration-500 hover:text-primary-600"
-                >
-                  Mockup Collection
-                </a>
-                <p className="tag mb-0 text-slate-100">Abstract</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="group relative overflow-hidden rounded-md shadow-sm">
-            <img
-              src="assets/logos/ridge-full-light.png"
-              className="transition duration-500 group-hover:origin-center group-hover:rotate-3 group-hover:scale-110"
-              alt=""
-            />
-            <div className="absolute inset-0 z-0 opacity-50 transition duration-500 group-hover:bg-black"></div>
-
-            <div className="content">
-              <div className="icon absolute top-4 right-4 z-10 hidden group-hover:block">
-                <a
-                  href="assets/images/portfolio/6.jpg"
-                  className="btn btn-primary btn-icon lightbox rounded-full"
-                >
-                  <i className="mdi mdi-camera"></i>
-                </a>
-              </div>
-
-              <div className="absolute bottom-4 left-4 z-10 hidden group-hover:block">
-                <a
-                  href=""
-                  className="h6 text-md font-medium text-white transition duration-500 hover:text-primary-600"
-                >
-                  Mockup Collection
-                </a>
-                <p className="tag mb-0 text-slate-100">Abstract</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="group relative overflow-hidden rounded-md shadow-sm">
-            <img
-              src="assets/logos/ridge-full-light.png"
-              className="transition duration-500 group-hover:origin-center group-hover:rotate-3 group-hover:scale-110"
-              alt=""
-            />
-            <div className="absolute inset-0 z-0 opacity-50 transition duration-500 group-hover:bg-black"></div>
-
-            <div className="content">
-              <div className="icon absolute top-4 right-4 z-10 hidden group-hover:block">
-                <a
-                  href="assets/images/portfolio/7.jpg"
-                  className="btn btn-primary btn-icon lightbox rounded-full"
-                >
-                  <i className="mdi mdi-camera"></i>
-                </a>
-              </div>
-
-              <div className="absolute bottom-4 left-4 z-10 hidden group-hover:block">
-                <a
-                  href=""
-                  className="h6 text-md font-medium text-white transition duration-500 hover:text-primary-600"
-                >
-                  Mockup Collection
-                </a>
-                <p className="tag mb-0 text-slate-100">Abstract</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="group relative overflow-hidden rounded-md shadow-sm">
-            <img
-              src="assets/logos/ridge-full-light.png"
-              className="transition duration-500 group-hover:origin-center group-hover:rotate-3 group-hover:scale-110"
-              alt=""
-            />
-            <div className="absolute inset-0 z-0 opacity-50 transition duration-500 group-hover:bg-black"></div>
-
-            <div className="content">
-              <div className="icon absolute top-4 right-4 z-10 hidden group-hover:block">
-                <a
-                  href="assets/images/portfolio/8.jpg"
                   className="btn btn-primary btn-icon lightbox rounded-full"
                 >
                   <i className="mdi mdi-camera"></i>
