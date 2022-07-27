@@ -1,37 +1,42 @@
 import React, { useEffect } from "react";
-import { tns } from "tiny-slider";
+import Slider from "react-slick";
 
 function IndexTestimonials() {
-  function tinySlider() {
-    tns({
-      container: ".tiny-two-item",
-      controls: true,
-
-      loop: true,
-      rewind: true,
-      autoplay: true,
-      autoplayButtonOutput: false,
-      autoplayTimeout: 3000,
-      navPosition: "bottom",
-      controlsText: [
-        '<i class="mdi mdi-chevron-left "></i>',
-        '<i class="mdi mdi-chevron-right"></i>',
-      ],
-
-      nav: false,
-      speed: 400,
-      gutter: 0,
-      responsive: {
-        768: {
-          items: 2,
+  var settings = {
+    dots: true,
+    arrows: true,
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    speed: 500,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true,
         },
       },
-    });
-  }
-
-  useEffect(() => {
-    tinySlider();
-  }, []);
+      {
+        breakpoint: 990,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        },
+      },
+      {
+        breakpoint: 630,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
 
   return (
     <section className="relative  md:py-24" id="testi">
@@ -51,8 +56,8 @@ function IndexTestimonials() {
         </div>
 
         <div className="relative mt-8 grid grid-cols-1">
-          <div className="tiny-two-item">
-            <div className="tiny-slide">
+          <Slider {...settings}>
+            <div className="">
               <div className="relative m-2 overflow-hidden rounded-md p-6 shadow shadow-slate-200 dark:shadow-slate-700 lg:flex lg:p-0">
                 <img
                   className="mx-auto h-24 w-24 rounded-full lg:h-auto lg:w-48 lg:rounded-none"
@@ -79,7 +84,7 @@ function IndexTestimonials() {
                 </div>
               </div>
             </div>
-            <div className="tiny-slide">
+            <div className="">
               <div className="relative m-2 overflow-hidden rounded-md p-6 shadow shadow-slate-200 dark:shadow-slate-700 lg:flex lg:p-0">
                 <img
                   className="mx-auto h-24 w-24 rounded-full lg:h-auto lg:w-48 lg:rounded-none"
@@ -106,7 +111,7 @@ function IndexTestimonials() {
                 </div>
               </div>
             </div>
-            <div className="tiny-slide">
+            <div className="">
               <div className="relative m-2 overflow-hidden rounded-md p-6 shadow shadow-slate-200 dark:shadow-slate-700 lg:flex lg:p-0">
                 <img
                   className="mx-auto h-24 w-24 rounded-full lg:h-auto lg:w-48 lg:rounded-none"
@@ -133,7 +138,7 @@ function IndexTestimonials() {
                 </div>
               </div>
             </div>
-            <div className="tiny-slide">
+            <div className="">
               <div className="relative m-2 overflow-hidden rounded-md p-6 shadow shadow-slate-200 dark:shadow-slate-700 lg:flex lg:p-0">
                 <img
                   className="mx-auto h-24 w-24 rounded-full lg:h-auto lg:w-48 lg:rounded-none"
@@ -160,7 +165,7 @@ function IndexTestimonials() {
                 </div>
               </div>
             </div>
-          </div>
+          </Slider>
         </div>
       </div>
     </section>
