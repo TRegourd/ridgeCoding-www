@@ -71,13 +71,13 @@ function Navbar() {
       <div className="container flex flex-wrap items-center justify-end">
         <a className="navbar-brand" href="">
           <img
-            src="/assets/logos/ridge-full-light.png"
-            className="logo-light-mode w-32"
+            src="/assets/logos/ridge-icon.png"
+            className="logo-light-mode w-20"
             alt=""
           />
           <img
-            src="/assets/logos/ridge-full-dark.png"
-            className="logo-dark-mode w-32"
+            src="/assets/logos/ridge-icon.png"
+            className="logo-dark-mode w-20"
             alt=""
           />
         </a>
