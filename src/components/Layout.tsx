@@ -9,7 +9,7 @@ const Layout = ({ children, navLight }: any) => {
   }
   return (
     <div className="dark:bg-slate-900">
-      <Navbar navLight={navLight} />
+      <Navbar />
       <div>{children}</div>
       <Footer />
       <BackTop />

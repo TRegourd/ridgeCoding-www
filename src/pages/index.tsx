@@ -2,9 +2,7 @@ import React from "react";
 import Layout from "../components/Layout";
 import { graphql } from "gatsby";
 import Seo from "../components/Seo";
-import IndexHeader from "../components/Index/IndexHeader";
-import ContactDetails from "../components/Index/ContactDetails";
-import IndexTestimonialsContainer from "../components/Index/IndexTestimonialsContainer";
+import IndexHero from "../components/IndexHero";
 
 export default function index({ data }: any) {
   const { title, subtitle, header_img } = data.header.frontmatter;
@@ -14,10 +12,7 @@ export default function index({ data }: any) {
     phone: "+ 33 123456789",
   };
 
-  const seo = {
-    metaTitle: title,
-    metaDescription: subtitle,
-  };
+  const seo = {};
 
   const header_image = data.staticImg.nodes.find((el: any) => {
     return el.name == header_img;
@@ -38,13 +33,7 @@ export default function index({ data }: any) {
   return (
     <Layout navLight={false}>
       <Seo seo={seo} lang={data.locales.edges[0].node.language} />
-      <IndexHeader title={title} subtitle={subtitle} img={header_image} />
-      <IndexTestimonialsContainer
-        title={testimonialsTitle}
-        subtitle={testimonialsSubTitle}
-        testimonials={testimonialsList}
-      />
-      <ContactDetails details={contactDetails} />
+      <IndexHero title={title} subtitle={subtitle} img={header_image} />
     </Layout>
   );
 }

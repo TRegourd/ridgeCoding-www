@@ -1,15 +1,7 @@
-import React, { BaseSyntheticEvent, useEffect, useState } from "react";
-import {
-  Link,
-  Trans,
-  useI18next,
-  useTranslation,
-} from "gatsby-plugin-react-i18next";
+import React, { useEffect } from "react";
+import { contactDetails } from "../libs/contactDetails";
 
-const Navbar = () => {
-  const { languages, originalPath } = useI18next();
-  const { t } = useTranslation();
-
+function Navbar() {
   function toggleMenu() {
     document.getElementById("isToggle")?.classList.toggle("open");
     var isOpen = document.getElementById("navigation");
@@ -22,125 +14,151 @@ const Navbar = () => {
   }
 
   function windowScroll() {
-    const navbar = document.getElementById("topnav");
+    const navbar = document.getElementById("navbar");
     if (navbar != null) {
       if (
         document.body.scrollTop >= 50 ||
         document.documentElement.scrollTop >= 50
       ) {
-        navbar.classList.add("nav-sticky");
+        navbar.classList.add("is-sticky");
       } else {
-        navbar.classList.remove("nav-sticky");
+        navbar.classList.remove("is-sticky");
       }
     }
   }
 
-  function openSubmenu(e: BaseSyntheticEvent) {
-    let el = document.getElementById(`${e.target.id}_submenu`);
-    el?.classList.toggle("open");
+  function getDefaultTheme() {
+    const userTheme = localStorage.getItem("ridgecodingUserTheme");
+    const htmlTag = document.getElementsByTagName("html")[0];
+
+    if (userTheme && htmlTag) {
+      htmlTag.className = userTheme;
+    } else {
+      if (
+        htmlTag &&
+        window.matchMedia &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches
+      ) {
+        htmlTag.className = "dark";
+      }
+    }
+  }
+
+  function changeTheme(e: any) {
+    e.preventDefault();
+    const htmlTag = document.getElementsByTagName("html")[0];
+
+    if (htmlTag.className.includes("dark")) {
+      htmlTag.className = "light";
+      localStorage.setItem("ridgecodingUserTheme", "light");
+    } else {
+      htmlTag.className = "dark";
+      localStorage.setItem("ridgecodingUserTheme", "dark");
+    }
   }
 
   useEffect(() => {
+    const chk = document.getElementById("chk");
+    chk?.addEventListener("click", changeTheme);
+    getDefaultTheme();
     window.addEventListener("scroll", (ev) => {
       ev.preventDefault();
       windowScroll();
     });
   }, []);
-
   return (
-    <header>
-      <nav id="topnav" className="defaultscroll  is-sticky ">
-        <div className="container ml-0">
-          <a className="logo" href="/" aria-label="ridgeCoding-Logo">
-            <>
-              <img
-                src={`/assets/logos/ridge-full-light.png`}
-                className="inline-block  h-full w-full dark:hidden"
-                alt=""
-              />
-              <img
-                src={`/assets/logos/ridge-full-dark.png`}
-                className="hidden h-full w-full dark:inline-block"
-                alt=""
-              />
-            </>
-          </a>
+    <nav className="navbar" id="navbar">
+      <div className="container flex flex-wrap items-center justify-end">
+        <a className="navbar-brand" href="">
+          <img
+            src="/assets/logos/ridge-full-light.png"
+            className="logo-light-mode w-32"
+            alt=""
+          />
+          <img
+            src="/assets/logos/ridge-full-dark.png"
+            className="logo-dark-mode w-32"
+            alt=""
+          />
+        </a>
 
-          <div className="menu-extras">
-            <div className="menu-item">
-              <button
-                className="navbar-toggle"
-                id="isToggle"
-                onClick={toggleMenu}
-                aria-label="Toggle navigation"
+        <div className="nav-icons ml-auto flex items-center lg_992:order-2">
+          <ul className="menu-social ps-lg-4 ms-2 mb-0 list-none">
+            <li className="inline">
+              <a
+                href={contactDetails.linkedin}
+                className="btn btn-sm btn-icon btn-primary rounded-full"
               >
-                <div className="lines">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </div>
+                <i className="mdi mdi-linkedin"></i>
+              </a>
+            </li>
+            <li className="inline">
+              <a
+                href={contactDetails.gitHub}
+                className="btn btn-sm btn-icon btn-primary rounded-full"
+              >
+                <i className="mdi mdi-github"></i>
+              </a>
+            </li>
+            <li className="inline" id="chk">
+              <button id="theme-mode">
+                <span className="btn btn-sm btn-icon btn-slate inline-flex rounded-full dark:hidden">
+                  <i className="mdi mdi-weather-sunny"></i>
+                </span>
+                <span className="btn btn-sm btn-icon btn-slate hidden rounded-full dark:inline-flex">
+                  <i className="mdi mdi-moon-waning-crescent"></i>
+                </span>
               </button>
-            </div>
-          </div>
+            </li>
+          </ul>
 
-          <div id="navigation">
-            <ul className={`navigation-menu justify-end `}>
-              <li>
-                <Link to="/" className="sub-menu-item">
-                  <Trans>NAV.about</Trans>
-                </Link>
-              </li>
-              <li>
-                <Link to="/contact" className="sub-menu-item">
-                  <Trans>NAV.contact</Trans>
-                </Link>
-              </li>
-
-              <li
-                className="has-submenu parent-parent-menu-item cursor-pointer"
-                onClick={openSubmenu}
-              >
-                <a href="#" id="lang" className="item-center">
-                  <img
-                    src={`/assets/logos/${
-                      t("NAV.lang") === "EN" ? "en" : "fr"
-                    }.svg`}
-                    height="20"
-                    width="20"
-                    alt={t("NAV.lang")}
-                  ></img>
-                </a>
-                <span className="menu-arrow"></span>
-                <ul id="lang_submenu" className="submenu">
-                  <li>
-                    <ul>
-                      {languages.map((lng) => (
-                        <li key={lng}>
-                          <Link
-                            to={originalPath}
-                            language={lng}
-                            className="sub-menu-item flex flex-row items-center gap-1"
-                          >
-                            <img
-                              src={`/assets/logos/${lng}.svg`}
-                              height="20"
-                              width="20"
-                              alt=""
-                            ></img>
-                            {lng}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </div>
+          <button
+            data-collapse="menu-collapse"
+            type="button"
+            className="collapse-btn ml-3 inline-flex items-center text-dark dark:text-white lg_992:hidden"
+            aria-controls="menu-collapse"
+            aria-expanded="false"
+          >
+            <span className="sr-only">Navigation Menu</span>
+            <i className="mdi mdi-menu mdi-24px"></i>
+          </button>
         </div>
-      </nav>
-    </header>
+
+        <div
+          className="navigation hidden lg_992:order-1 lg_992:flex"
+          id="menu-collapse"
+        >
+          <ul className="navbar-nav" id="navbar-navlist">
+            <li className="nav-item">
+              <a className="nav-link active" href="#home">
+                Home
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#about">
+                About us
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#features">
+                Services
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#portfolio">
+                Portfolio
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#contact">
+                Contact us
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
   );
-};
+}
 
 export default Navbar;

@@ -1,0 +1,77 @@
+/*********************************/
+/*         Components            */
+/*===============================*/
+.btn {
+    @apply py-2 px-5 inline-block tracking-wide border align-middle transition duration-500 ease-in-out text-base text-center;
+    &.btn-lg{
+        @apply py-2.5 px-6 text-lg;
+    }
+    &.btn-sm{
+        @apply py-[5px] px-4 text-sm;
+    }
+    /*  Button icons */
+    &.btn-icon {
+        @apply p-0 h-9 w-9 inline-flex items-center text-center justify-center text-base;
+        &.btn-lg {
+            @apply h-10 w-10;
+        }
+        &.btn-sm {
+            @apply h-8 w-8;
+        }
+    }
+
+    /*  Button Primary */
+    &.btn-primary {
+        @apply bg-primary-600 border-primary-600 text-white;
+
+        &:hover,
+        &:focus,
+        &:active,
+        &.active,
+        &.focus {
+            @apply bg-primary-700 border-primary-700;
+        }
+
+        &.btn-outline {
+            @apply bg-transparent border-primary-600 text-primary-600;
+
+            &:hover,
+            &:focus,
+            &:active,
+            &.active,
+            &.focus {
+                @apply bg-primary-600 text-white;
+            }
+        }
+
+        &.btn-soft {
+            @apply bg-primary-600/5 border-primary-600/10 text-primary-600;
+            &:hover,
+            &:focus,
+            &:active,
+            &.active,
+            &.focus {
+                @apply bg-primary-600 border-primary-600 text-white;
+            }
+        }
+    }
+
+    &.btn-slate {
+        @apply bg-slate-200 border-slate-200 text-dark dark:bg-gray-700 dark:border-gray-700 dark:text-white shadow shadow-slate-100 dark:shadow-slate-800;
+        &:hover,
+        &:focus,
+        &:active,
+        &.active,
+        &.focus {
+            @apply bg-slate-100 dark:bg-gray-900;
+        }
+    }
+}
+
+.btn-readmore {
+    @apply relative p-0 border-none after:content-[''] after:absolute after:h-px after:w-0 after:right-0 after:bottom-0 after:left-0 after:transition-all after:duration-500;
+    
+    &:hover {
+        @apply after:w-full after:right-auto;
+    }
+}

@@ -1,7 +1,7 @@
 ---
 slug: "index/static"
 lang: "en"
-title: "Your Web Development Partner"
-subtitle: "Lorem Ipsum"
+title: "Ridge Coding"
+subtitle: "You Web Development Partner"
 header_img: "index-header-bg"
 ---

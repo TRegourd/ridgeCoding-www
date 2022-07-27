@@ -3,9 +3,8 @@ const plugin = require("tailwindcss/plugin");
 
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
-  important: true,
   darkMode: "class",
-
+  important: true,
   theme: {
     screens: {
       xs: "540px",
@@ -35,7 +34,7 @@ module.exports = {
       colors: {
         dark: "#3c4858",
         black: "#161c2d",
-        "dark-footer": "#161c28",
+        "black-900": "#1c2430",
         primary: {
           50: "#ecfaf8",
           100: "#c7f1e9",
@@ -47,24 +46,7 @@ module.exports = {
           700: "#01b1a5",
           800: "#175d4f",
           900: "#0e382f",
-        }, // This is theme primary color please change your primary color here.
-        success: colors.sky,
-        warning: colors.amber,
-        danger: colors.red,
-        info: colors.blue,
-        light: colors.gray,
-        // muted: colors.slate,
-      },
-
-      boxShadow: {
-        sm: "0 2px 4px 0 rgb(60 72 88 / 0.15)",
-        DEFAULT: "0 0 3px rgb(60 72 88 / 0.15)",
-        md: "0 5px 13px rgb(60 72 88 / 0.20)",
-        lg: "0 10px 25px -3px rgb(60 72 88 / 0.15)",
-        xl: "0 20px 25px -5px rgb(60 72 88 / 0.1), 0 8px 10px -6px rgb(60 72 88 / 0.1)",
-        "2xl": "0 25px 50px -12px rgb(60 72 88 / 0.25)",
-        inner: "inset 0 2px 4px 0 rgb(60 72 88 / 0.05)",
-        testi: "2px 2px 2px -1px rgb(60 72 88 / 0.15)",
+        },
       },
 
       fontSize: {
@@ -104,10 +86,9 @@ module.exports = {
     },
   },
 
-  safelist: [],
-
   plugins: [
-    require("@tailwindcss/line-clamp"),
-    require("@tailwindcss/typography"),
+    // require('@tailwindcss/forms'), ({
+    //     strategy: 'class',
+    // }),
   ],
 };

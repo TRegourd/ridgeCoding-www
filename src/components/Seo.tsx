@@ -3,13 +3,13 @@ import { Helmet } from "react-helmet";
 
 const Seo = ({ seo = {}, lang }: any) => {
   const { siteName, defaultSeo, favicon } = {
-    siteName: "Rridge Coding",
+    siteName: "Ridge Coding",
     defaultSeo: {
-      metaTitle: "",
-      metaDescription: "",
+      metaTitle: "Ridge Coding",
+      metaDescription: "Developpement de Site et d'applications Web",
       shareImage: { localFile: { url: "" } },
     },
-    favicon: { localFile: { url: "" } },
+    favicon: { localFile: { url: "/assets/logos/ridge-icon.png" } },
   };
 
   // Merge default and page-specific SEO values
@@ -17,6 +17,7 @@ const Seo = ({ seo = {}, lang }: any) => {
 
   // Add site name to title
   fullSeo.metaTitle = `${fullSeo.metaTitle} | ${siteName}`;
+  fullSeo.metaDescription = `${fullSeo.metaDescription}`;
 
   const getMetaTags = () => {
     const tags = [];
