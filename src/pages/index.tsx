@@ -7,6 +7,7 @@ import IndexAbout from "../components/IndexAbout";
 import IndexServices from "../components/IndexServices";
 import IndexPortfolio from "../components/IndexPortfolio";
 import IndexTestimonials from "../components/IndexTestimonials";
+import IndexContact from "../components/IndexContact";
 
 export default function index({ data }: any) {
   const { title, subtitle, header_img } = data.header.frontmatter;
@@ -42,6 +43,7 @@ export default function index({ data }: any) {
       <IndexServices />
       <IndexPortfolio />
       <IndexTestimonials />
+      <IndexContact />
     </Layout>
   );
 }
