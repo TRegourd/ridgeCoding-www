@@ -3,6 +3,10 @@ import Layout from "../components/Layout";
 import { graphql } from "gatsby";
 import Seo from "../components/Seo";
 import IndexHero from "../components/IndexHero";
+import IndexAbout from "../components/IndexAbout";
+import IndexServices from "../components/IndexServices";
+import IndexPortfolio from "../components/IndexPortfolio";
+import IndexTestimonials from "../components/IndexTestimonials";
 
 export default function index({ data }: any) {
   const { title, subtitle, header_img } = data.header.frontmatter;
@@ -34,6 +38,10 @@ export default function index({ data }: any) {
     <Layout navLight={false}>
       <Seo seo={seo} lang={data.locales.edges[0].node.language} />
       <IndexHero title={title} subtitle={subtitle} img={header_image} />
+      <IndexAbout />
+      <IndexServices />
+      <IndexPortfolio />
+      <IndexTestimonials />
     </Layout>
   );
 }

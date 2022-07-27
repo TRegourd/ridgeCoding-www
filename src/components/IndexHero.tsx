@@ -32,7 +32,7 @@ function IndexHero({
               </p>
 
               <div className="relative mt-10">
-                <a href="" className="btn btn-primary rounded-md">
+                <a href="#contact" className="btn btn-primary rounded-md">
                   <Trans>BUTTON.contact</Trans>
                 </a>
               </div>
