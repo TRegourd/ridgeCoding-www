@@ -15,6 +15,7 @@
   "CONTACT": {
     "email": "Email",
     "phone": "Téléphone",
-    "location": "Adresse"
+    "name": "Votre Nom",
+    "message": "Votre Message"
   }
 }
