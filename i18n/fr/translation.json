@@ -16,6 +16,9 @@
     "email": "Email",
     "phone": "Téléphone",
     "name": "Votre Nom",
-    "message": "Votre Message"
+    "message": "Votre Message",
+    "section": "Contact",
+    "title": "Nous contacter",
+    "subtitle": "Une question ? Un projet ? Une mission ? N'hesitez pas à nous contacter !"
   }
 }

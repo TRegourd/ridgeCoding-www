@@ -14,15 +14,14 @@ function IndexContact() {
       <div className="container">
         <div className="grid grid-cols-1 pb-8 text-center">
           <h6 className="mb-2 text-base font-medium uppercase text-primary-600">
-            Contact us
+            <Trans>CONTACT.section</Trans>
           </h6>
           <h3 className="mb-4 text-xl font-medium dark:text-white md:text-2xl">
-            Get In Touch !
+            <Trans>CONTACT.title</Trans>
           </h3>
 
           <p className="mx-auto max-w-xl text-slate-400 dark:text-slate-300">
-            Launch your campaign and benefit from our expertise on designing and
-            managing conversion centered Tailwind CSS html page.
+            <Trans>CONTACT.subtitle</Trans>
           </p>
         </div>
 
