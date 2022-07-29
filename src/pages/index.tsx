@@ -9,14 +9,12 @@ import IndexPortfolio from "../components/IndexPortfolio";
 import IndexTestimonials from "../components/IndexTestimonials";
 import IndexContact from "../components/IndexContact";
 import IndexProcess from "../components/IndexProcess";
+import { useTranslation } from "react-i18next";
+import { ITestimonial } from "../libs/interfaces";
 
 export default function index({ data }: any) {
+  const { t } = useTranslation();
   const { title, subtitle, header_img } = data.header.frontmatter;
-
-  const contactDetails = {
-    email: "contact@ridgecoding.com",
-    phone: "+ 33 123456789",
-  };
 
   const seo = {};
 
@@ -24,17 +22,18 @@ export default function index({ data }: any) {
     return el.name == header_img;
   })?.childrenImageSharp[0];
 
+  const rawTestimonialsList: ITestimonial[] = t("TESTIMONIALS.testimonials", {
+    returnObjects: true,
+  });
+
   const testimonialsList = [
-    ...data.testimonialsList.frontmatter.testimonials.map((item: any) => ({
+    ...rawTestimonialsList.map((item: any) => ({
       image: data.testimonialsImg.nodes.find((el: any) => {
         return item.avatar == el.name;
       })?.childrenImageSharp[0],
       ...item,
     })),
   ];
-
-  const testimonialsTitle = data.testimonialsList.frontmatter.title;
-  const testimonialsSubTitle = data.testimonialsList.frontmatter.subtitle;
 
   return (
     <Layout navLight={false}>
@@ -46,7 +45,7 @@ export default function index({ data }: any) {
         <IndexProcess />
       </section>
       <IndexPortfolio />
-      <IndexTestimonials />
+      <IndexTestimonials list={testimonialsList} />
       <IndexContact />
     </Layout>
   );
@@ -101,24 +100,6 @@ export const query = graphql`
         }
         relativePath
         extension
-      }
-    }
-    testimonialsList: markdownRemark(
-      frontmatter: {
-        lang: { eq: $language }
-        slug: { eq: "index/testimonials" }
-      }
-    ) {
-      id
-      frontmatter {
-        title
-        subtitle
-        testimonials {
-          name
-          position
-          avatar
-          text
-        }
       }
     }
     testimonialsImg: allFile(
