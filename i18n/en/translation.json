@@ -21,5 +21,17 @@
     "section": "Contact Us",
     "title": "Get In Touch",
     "subtitle": "A question ? A project ? A mission ? Feel free to contact us !"
+  },
+
+  "TESTIMONIALS": {
+    "section": "Testimonial",
+    "title": "Client's Review",
+    "subtitle": "What our customers say about us."
+  },
+
+  "PORTFOLIO": {
+    "section": "Portfolio",
+    "title": "Our Works & Projects",
+    "subtitle": "The latest project in our portfolio"
   }
 }

@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Trans } from "react-i18next";
 import Slider from "react-slick";
 
 function IndexTestimonials() {
@@ -43,15 +44,14 @@ function IndexTestimonials() {
       <div className="container">
         <div className="grid grid-cols-1 pb-8 text-center">
           <h6 className="mb-2 text-base font-medium uppercase text-primary-600">
-            Testimonial
+            <Trans>TESTIMONIALS.section</Trans>
           </h6>
           <h3 className="mb-4 text-xl font-medium dark:text-white md:text-2xl">
-            Client's Review
+            <Trans>TESTIMONIALS.title</Trans>
           </h3>
 
           <p className="mx-auto max-w-xl text-slate-400 dark:text-slate-300">
-            Launch your campaign and benefit from our expertise on designing and
-            managing conversion centered Tailwind CSS html page.
+            <Trans>TESTIMONIALS.subtitle</Trans>
           </p>
         </div>
 

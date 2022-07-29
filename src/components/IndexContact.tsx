@@ -1,6 +1,5 @@
 import React from "react";
 import { Trans, useTranslation } from "react-i18next";
-import { text } from "stream/consumers";
 import { contactDetails } from "../libs/contactDetails";
 
 function IndexContact() {
